@@ -27,7 +27,7 @@ export class FindSpendComponent implements OnInit {
   }
 
   convertToRenderSpends(spends:Spend[]){
-    //and also change the  to locale en-IN
+    //and also change the  to locale es-CL dd-MM-yyyy
     let spendsMap:Map<string,Spend[]> = new Map();
     spends.forEach(sp=>{
       sp.date = new Date(sp.date).toLocaleDateString('en-IN');
