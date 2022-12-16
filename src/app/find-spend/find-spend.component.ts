@@ -27,8 +27,10 @@ export class FindSpendComponent implements OnInit {
   }
 
   convertToRenderSpends(spends:Spend[]){
+    //and also change the  to locale en-IN
     let spendsMap:Map<string,Spend[]> = new Map();
     spends.forEach(sp=>{
+      sp.date = new Date(sp.date).toLocaleDateString('en-IN');
       if(spendsMap.has(sp.category.heading)){
         spendsMap.get(sp.category.heading)?.push(sp)
       }
