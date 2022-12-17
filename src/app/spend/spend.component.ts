@@ -28,9 +28,10 @@ export class SpendComponent implements OnInit {
       //backend needs the date format to be in the form of yyyy-MM-dd. so converting it before sending
       spend.date = new Date().toLocaleDateString('fr-CA');
       this.spends.spendMap.get(category)?.push(spend);
-      spend.id = 0;
+      spend.id = NaN;
       this.spnSrv.postSpend(spend).subscribe({next:(data)=>{console.log(data)},error:(err)=>{console.log(err)}})
-      console.log(spend)
+      spend.date = new Date().toLocaleDateString('es-CL');
+      console.log(this.spends)
     }
   }
 
