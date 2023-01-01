@@ -3,7 +3,7 @@
         <div>{{category}}</div>
         <div>
             <div *ngFor="let sp of spends.spendMap.get(category)" class="grid-container">
-                <span class="repeat-spend pointer" (click)="repeatSpend(sp.id,category)">➕</span>
+                <span class="repeat-spend pointer" (click)="repeatSpend(sp.id,category)"></span>
                 <span class="grid-item">{{sp.purpose}}</span>
                 <span class="grid-item">{{sp.date}}</span>
                 <span class="grid-item">₹{{sp.money}}<span *ngIf="sp.forOthers!=0">::{{sp.forOthers}}</span></span>

@@ -10,3 +10,10 @@
     padding: 0px;
     margin: 0px;
 }
+/* the below css selector applies the style(displaying the add btn)
+to the child(repeat-spend) 
+when the parent(grid-container) is hovered
+*/
+.grid-container:hover .repeat-spend::before{
+    content: "➕";
+}
